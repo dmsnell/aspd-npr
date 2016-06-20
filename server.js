@@ -16,8 +16,9 @@ const persister = state => fs.writeFile( stateFile, JSON.stringify( state ), { e
 const state = JSON.parse( fs.readFileSync( stateFile, { encoding: 'utf8' } ) )
 
 app.use( bodyParser.json() )
+app.use( express.static( './client/assets' ) )
 
-app.get( '/', dashboardApp )
+app.get( '/', dashboardApp( state ) )
 app.get( '/servers/:id', getServerInfo( state ) )
 app.get( '/servers/', getServerList( state ) )
 app.post( '/servers/:id', setServerInfo( state, persister ) )

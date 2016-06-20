@@ -1,0 +1,39 @@
+.server-list {
+  padding: 1em;
+
+  font-family: sans-serif;
+}
+
+.server-list .server {
+  border: 2px solid #fff;
+  width: 300px;
+  max-width: 100%;
+  float: left;
+
+  padding: 1em;
+  margin-bottom: 2em;
+
+  line-height: 1.8;
+}
+
+.server-list .server:hover {
+  font-weight: bold;
+}
+
+.server-list .server.interrupted {
+  background-color: #fee;
+  border: 2px solid #faa;
+}
+
+.server .hostname {
+  font-family: courier, monospace;
+}
+
+.server .load-display span {
+  margin-right: 0.5em;
+}
+
+.load-low { color: #8cf; }
+.load-normal { color: #484; }
+.load-medium { color: #a88; }
+.load-high { color: #faa; }
