@@ -1,0 +1,19 @@
+{
+  "name": "aspd-npr",
+  "version": "1.0.0",
+  "description": "Mock dashboard for server status messages",
+  "main": "server.js",
+  "scripts": {
+    "test": "curl -H \"Content-type: application/json\" -X POST -d '{\"id\":67,\"load\":[1.05,1,0.95],\"hostname\":\"chengdu.localhost\"}' http://localhost:4000/servers/67",
+    "start": "$(npm bin)/nodemon server.js"
+  },
+  "author": "Dennis Snell <dmsnell@xkq.io>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.9.2"
+  }
+}
